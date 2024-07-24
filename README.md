@@ -23,3 +23,24 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 
    ```bash
    git clone https://github.com/waaashed/gMSACreator.git
+
+2. **Exécution du Script :**
+
+   Ouvre une fenêtre PowerShell avec les privilèges d'administrateur et exécute le script.
+
+   ```bash
+   .\gmsacreator.ps1
+
+2. **Configuration :**
+
+![gMSA2 Image](https://i.postimg.cc/7ZRsYTds/Capture.png)
+
+Les champs à remplir sont :
+
+Nom du compte de service (Name) : Le nom du compte gMSA à créer.
+Description : Une description du compte gMSA.
+Nom DNS complet (DNSHostName) : Le FQDN du compte de service.
+Intervalle de changement de mot de passe (ManagedPasswordIntervalInDays) : L'intervalle en jours pour le changement automatique du mot de passe, par exemple 30.
+Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) : Les entités autorisées à récupérer le mot de passe.
+Identité de la machine : L’association permet à cette machine de récupérer et d'utiliser les informations d'identification du compte de service géré.
+   
