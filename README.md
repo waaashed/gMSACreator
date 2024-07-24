@@ -37,7 +37,6 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 
 Les champs à remplir sont :
 
-   ```bash
 Nom du compte de service (Name) : Le nom du compte gMSA à créer.
 
 Description : Une description du compte gMSA.
