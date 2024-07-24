@@ -35,7 +35,7 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 
 ![gMSA2 Image](https://i.postimg.cc/7ZRsYTds/Capture.png)
 
-> [!WARNING]
+
 > Les champs à remplir sont :
 
 - **Nom du compte de service (Name) :** Le nom du compte gMSA à créer.
@@ -45,6 +45,20 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 - **Nom DNS complet (DNSHostName) :** Le FQDN du compte de service.
 
 - **Intervalle de changement de mot de passe (ManagedPasswordIntervalInDays) :** L'intervalle en jours pour le changement automatique du mot de passe, par exemple 30.
+
+  ```bash 
+
+          ___        _   ____                    
+         / _ \      | | |___ \                   
+   ___  | | | |   __| |   __) |   ___   _ __     
+ / __| | | | |  / _` |  |__ <   / _ \ | '_ \     
+ \__ \ | |_| | | (_| |  ___) | |  __/ | |_) |    
+ |___/  \___/   \__,_| |____/   \___| | .__/     
+                                       | |       
+                                       |_|       
+                                                  
+```
+
 
 - **Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) :** Les entités autorisées à récupérer le mot de passe.
 
