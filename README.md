@@ -39,14 +39,14 @@ Les champs à remplir sont :
 
    ```bash
 Nom du compte de service (Name) : Le nom du compte gMSA à créer.
-   ```bash
+
 Description : Une description du compte gMSA.
-   ```bash
+
 Nom DNS complet (DNSHostName) : Le FQDN du compte de service.
-   ```bash
+
 Intervalle de changement de mot de passe (ManagedPasswordIntervalInDays) : L'intervalle en jours pour le changement automatique du mot de passe, par exemple 30.
-   ```bash
+
 Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) : Les entités autorisées à récupérer le mot de passe.
-   ```bash
+
 Identité de la machine : L’association permet à cette machine de récupérer et d'utiliser les informations d'identification du compte de service géré.
    
