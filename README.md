@@ -45,7 +45,7 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 
 - **Intervalle de changement de mot de passe (ManagedPasswordIntervalInDays) :** L'intervalle en jours pour le changement automatique du mot de passe, par exemple 30.
 
-- **Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) :** L'entité autorisé à récupérer le mot de passe. 
+- **Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) :** L'entité ou les entités autorisées à récupérer le mot de passe. 
 
 - **Identité de la machine :** L’association permet à cette machine de récupérer et d'utiliser les informations d'identification du compte de service géré.
 
