@@ -50,6 +50,6 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 
 - **Identité de la machine :** L’association permet à cette machine de récupérer et d'utiliser les informations d'identification du compte de service géré.
 
-Les gMSA sont créées dans 
+> Les gMSA sont créées dans : 
 
-![gMSA3 Image](https://support.imanami.com/api/data/v9.0/msdyn_knowledgearticleimages%28a87e257d-d2d8-ea11-a813-000d3a3ab828%29/msdyn_blobfile/$value)
+![gMSA3 Image](https://i0.wp.com/azurecloudai.blog/wp-content/uploads/2024/01/6acaf-image-38.png)
