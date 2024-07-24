@@ -47,7 +47,7 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 
 - **Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) :** L'entité ou les entités autorisées à récupérer le mot de passe. 
 
-- **Identité de la machine :** L'entité d'une machine autorisée de récupérer et d'utiliser les informations d'identification du compte de service géré.
+- **Identité de la machine :** Nom d'une machine autorisée à récupérer et utiliser les informations d'identification du compte de service géré.
 
 > Les gMSA sont créées dans l'OU Managed Service Account : 
 
