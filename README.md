@@ -1,12 +1,12 @@
 # Créateur de gMSA (Group Managed Service Account) pour Active Directory
 
-![gMSA Image](https://i.postimg.cc/TP7RPQf8/logogmsa.jpg) <!-- Remplace ce lien par une image pertinente pour ton projet -->
+![gMSA Image](https://i.postimg.cc/TP7RPQf8/logogmsa.jpg) <!-- Remplacer ce lien par une image pertinente pour le projet -->
 
 Ce projet open source est un créateur de comptes de service gMSA (Group Managed Service Accounts) avec une interface graphique développée en PowerShell. Il est conçu pour faciliter la création et la gestion des comptes de service gMSA directement depuis un contrôleur de domaine.
 
 ## Fonctionnalités
 
-- **Création de gMSA :** Crée et configure des comptes gMSA avec des paramètres personnalisables.
+- **Création de gMSA :** Créer et configurer des comptes gMSA avec des paramètres personnalisables.
 - **Interface Graphique :** Interface utilisateur simple et intuitive pour une gestion facile.
 
 ## Prérequis
@@ -18,14 +18,14 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 
 1. **Téléchargement du Script :**
 
-   Télécharge le script PowerShell depuis le dépôt GitHub.
+   Téléchargez le script PowerShell depuis le dépôt GitHub.
 
    ```bash
    git clone https://github.com/waaashed/gMSACreator.git
 
 2. **Exécution du Script :**
 
-   Ouvre une fenêtre PowerShell avec les privilèges d'administrateur et exécute le script.
+   Ouvrez une fenêtre PowerShell avec les privilèges d'administrateur et exécutez le script.
 
    ```bash
    .\gmsacreator.ps1
