@@ -49,17 +49,3 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 - **Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) :** Les entités autorisées à récupérer le mot de passe.
 
 - **Identité de la machine :** L’association permet à cette machine de récupérer et d'utiliser les informations d'identification du compte de service géré.
-
-
-  ```bash 
-
-          ___        _   ____                    
-         / _ \      | | |___ \                   
-   ___  | | | |   __| |   __) |   ___   _ __     
- / __| | | | |  / _` |  |__ <   / _ \ | '_ \     
- \__ \ | |_| | | (_| |  ___) | |  __/ | |_) |    
- |___/  \___/   \__,_| |____/   \___| | .__/     
-                                       | |       
-                                       |_|       
-                                                  
-```
