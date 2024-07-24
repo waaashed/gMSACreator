@@ -12,8 +12,7 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 ## Prérequis
 
 > [!WARNING]
-> Le script doit être exécuté sur un contrôleur de domaine.
-- **Compte :** Un compte avec des privilèges d'administrateur est nécessaire.
+> Le script doit être exécuté sur un contrôleur de domaine avec un compte d'administrateur à haut privilège.
 
 ## Comment utiliser
 
