@@ -41,7 +41,7 @@ Ce projet open source est un créateur de comptes de service gMSA (Group Managed
 
 - **Description :** Une description du compte gMSA.
 
-- **Nom DNS complet (DNSHostName) :** Le FQDN du compte de service.
+- **Nom de domaine racine (AD) :** Le FQDN du compte de service sera automatiquement attribué à l'aide du nom du compte de service renseigné précédemment.
 
 - **Intervalle de changement de mot de passe (ManagedPasswordIntervalInDays) :** L'intervalle en jours pour le changement automatique du mot de passe, par exemple 30.
 
