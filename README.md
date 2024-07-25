@@ -2,7 +2,7 @@
 
 ![gMSA Image](https://i.postimg.cc/TP7RPQf8/logogmsa.jpg) <!-- Remplacer ce lien par une image pertinente pour le projet -->
 
-Ce projet open source est un créateur de comptes de service gMSA (Group Managed Service Accounts) avec une interface graphique développée en PowerShell. Il est conçu pour faciliter la création et la gestion des comptes de service gMSA directement depuis un contrôleur de domaine.
+Ce projet open source est un créateur et éditeur de comptes de service gMSA (Group Managed Service Accounts) avec une interface graphique développée en PowerShell. Il est conçu pour faciliter la création et la gestion des comptes de service gMSA directement depuis un contrôleur de domaine.
 
 ## Fonctionnalités
 
