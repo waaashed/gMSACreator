@@ -93,6 +93,12 @@ $submitButton.Add_Click({
         return
     }
 
+    # Vérifier la longueur du nom du compte de service
+    if ($ServiceAccountName.Length -gt 15) {
+        [System.Windows.Forms.MessageBox]::Show("Le nom du compte de service ne doit pas dépasser 15 caractères.", "Erreur de saisie", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
+        return
+    }
+
     try {
         # Créer le compte de service gMSA
         Write-Host "Création du compte de service gMSA..."
@@ -103,16 +109,16 @@ $submitButton.Add_Click({
                               -PrincipalsAllowedToRetrieveManagedPassword $PrincipalAllowedToRetrievePassword `
                               -Enabled $True
 
-        Write-Host "Compte de service gMSA créé avec succès."
-
         # Associer le compte de service à la machine
         Write-Host "Association du compte de service avec la machine..."
         Add-ADComputerServiceAccount -Identity $MachineIdentity `
                                       -ServiceAccount $ServiceAccountName
 
-        Write-Host "Compte de service associé avec succès à la machine."
+        # Message de succès
+        [System.Windows.Forms.MessageBox]::Show("Compte de service gMSA créé et associé avec succès.", "Succès", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Information)
     } catch {
-        Write-Host "Une erreur s'est produite : $_"
+        # Message d'erreur
+        [System.Windows.Forms.MessageBox]::Show("Une erreur s'est produite : $_", "Erreur", [System.Windows.Forms.MessageBoxButtons]::OK, [System.Windows.Forms.MessageBoxIcon]::Error)
     }
     
     # Fermer le formulaire
