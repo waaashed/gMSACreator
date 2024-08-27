@@ -61,7 +61,7 @@ Ce projet open source est un créateur et éditeur de comptes de service gMSA (G
 
 ![gMSA3 Image](https://i0.wp.com/azurecloudai.blog/wp-content/uploads/2024/01/6acaf-image-38.png)
 
-3. **Gestion PrincipalsAllowedToRetrieveManagedPassword (gmsaeditor.ps1) :**
+4. **Gestion PrincipalsAllowedToRetrieveManagedPassword (gmsaeditor.ps1) :**
 
    ![gMSA4 Image](https://i.postimg.cc/WbbLCyNW/Capture.png)
 
