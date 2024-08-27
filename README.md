@@ -40,6 +40,7 @@ Ce projet open source est un créateur et éditeur de comptes de service gMSA (G
 ![gMSA2 Image](https://i.postimg.cc/7ZRsYTds/Capture.png)
 
 
+> [!IMPORTANT]
 > Les champs à remplir sont :
 
 - **Nom du compte de service (Name) :** Le nom du compte gMSA à créer (L’attribut ne doit pas dépasser 15 caractères).
@@ -53,7 +54,9 @@ Ce projet open source est un créateur et éditeur de comptes de service gMSA (G
 - **Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) :** L'entité ou les entités autorisées à récupérer le mot de passe. 
 
 - **Identité de la machine :** Nom d'une machine autorisée à récupérer et utiliser les informations d'identification du compte de service géré.
+  
 
+> [!NOTE]  
 > Les gMSA sont créées dans l'OU Managed Service Account : 
 
 ![gMSA3 Image](https://i0.wp.com/azurecloudai.blog/wp-content/uploads/2024/01/6acaf-image-38.png)
@@ -61,15 +64,17 @@ Ce projet open source est un créateur et éditeur de comptes de service gMSA (G
 3. **Gestion PrincipalsAllowedToRetrieveManagedPassword (gmsaeditor.ps1) :**
 
    ![gMSA4 Image](https://i.postimg.cc/WbbLCyNW/Capture.png)
-   
 
+   
+> [!IMPORTANT]
 > Les champs à remplir sont :
 
 - **Nom du compte de service (Name) :** Le nom du compte gMSA à gérer.
 
 - **Principal à ajouter :** Ajout d'un PrincipalsAllowedToRetrieveManagedPassword.
   
-
+  
+> [!TIP]
 > Pour supprimer un Principal, sélectionnez-le dans la listebox après avoir renseigné le nom du compte de service.
 
 
