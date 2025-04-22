@@ -1,80 +1,119 @@
-# Créateur & Éditeur de gMSA (Group Managed Service Account) pour Active Directory
+# 🛠️ gMSA Creator & Editor
 
-![gMSA Image](https://i.postimg.cc/TP7RPQf8/logogmsa.jpg) <!-- Remplacer ce lien par une image pertinente pour le projet -->
+<img src="https://i.postimg.cc/TP7RPQf8/logogmsa.jpg" alt="gMSA banner" width="500" />
 
-Ce projet open source est un créateur et éditeur de comptes de service gMSA (Group Managed Service Accounts) avec une interface graphique développée en PowerShell. Il est conçu pour faciliter la création et la gestion des comptes de service gMSA directement depuis un contrôleur de domaine.
+> **Interface graphique PowerShell** pour créer, modifier et administrer des **Group Managed Service Accounts (gMSA)** dans Active Directory.
+
+[![Licence MIT](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE)
+[![PowerShell](https://img.shields.io/badge/PowerShell-5%2B-blue.svg)](#prérequis)
+[![Dernier commit](https://img.shields.io/github/last-commit/waaashed/gMSACreator)](https://github.com/waaashed/gMSACreator/commits/main)
+
+---
+
+## Table des matières
+
+1. [Fonctionnalités](#fonctionnalités)
+2. [Prérequis](#prérequis)
+3. [Installation](#installation)
+4. [Utilisation rapide](#utilisation-rapide)
+   - [Création d'un gMSA](#création-dun-gmsa)
+   - [Gestion des Principals](#gestion-des-principals)
+5. [Captures d’écran](#captures-décran)
+6. [Contribution](#contribution)
+7. [Licence](#licence)
+
+---
 
 ## Fonctionnalités
 
-- **Création de gMSA :** Créer et configurer des comptes gMSA avec des paramètres personnalisables.
-- **Interface graphique :** Interface utilisateur simple et intuitive pour une gestion facile.
-- **Gestion des Principals :** Interface de gestion des Principals avec des fonctionnalités avancées.
+- **Création simplifiée** de comptes gMSA avec paramètres personnalisables  
+- **Interface graphique moderne** (WinForms/WPF) entièrement en PowerShell  
+- **Édition à chaud** des attributs *PrincipalsAllowedToRetrieveManagedPassword*  
+- **Validation** en temps réel des champs saisis (longueur, caractères autorisés, etc.)  
+- **Journalisation** complète des actions dans le journal d’application Windows  
+- **Scripts autonomes** : rien à installer côté client, tout se fait sur le contrôleur de domaine  
+
+---
 
 ## Prérequis
 
-> [!WARNING]
-> Les scripts doivent être exécutés sur un contrôleur de domaine avec un compte d'administrateur à haut privilège.
+> ⚠️ Les scripts **doivent** être exécutés sur un **contrôleur de domaine** avec un compte disposant de droits **Domain Admin** ou équivalents.
 
-## Comment utiliser
+| Élément | Version minimale |
+| ------- | ---------------- |
+| Windows Server | 2012 R2 |
+| PowerShell | 5.1 |
+| Module **ActiveDirectory** | Installé & importé |
+| Niveau fonctionnel du domaine | 2012 R2 |
 
-1. **Téléchargement des Scripts :**
+---
 
-   Téléchargez le script PowerShell depuis le dépôt GitHub.
+## Installation
 
-   ```bash
-   git clone https://github.com/waaashed/gMSACreator.git
+Clonez simplement le dépôt :
 
-2. **Exécution des Scripts :**
+```bash
+git clone https://github.com/waaashed/gMSACreator.git
+cd gMSACreator
+```
 
-   Ouvrez une fenêtre PowerShell avec les privilèges d'administrateur pour exécuter les scripts.
+> 💡 **Astuce :** exécutez `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` pour autoriser les scripts le temps de la session.
 
-   ```bash
-   .\gmsacreator.ps1
-   ```
+---
 
-   ```bash
-   .\gmsaeditor.ps1
+## Utilisation rapide
 
-2. **Création gMSA (gmsacreator.ps1) :**
+### Création d'un gMSA
 
-![gMSA2 Image](https://i.postimg.cc/7ZRsYTds/Capture.png)
+```powershell
+# Ouvrir une console PowerShell en mode administrateur
+.\gmsacreator.ps1
+```
 
+![Creator screenshot](https://i.postimg.cc/7ZRsYTds/Capture.png)
 
-> [!IMPORTANT]
-> Les champs à remplir sont :
+Champs à renseigner :
 
-- **Nom du compte de service (Name) :** Le nom du compte gMSA à créer (L’attribut ne doit pas dépasser 15 caractères).
+| Champ | Description |
+| ----- | ----------- |
+| **Name** | Nom du compte (max : 15 caractères) |
+| **Description** | Texte descriptif libre |
+| **ManagedPasswordIntervalInDays** | Rotation automatique du mot de passe (par défaut : 30 jours) |
+| **PrincipalsAllowedToRetrieveManagedPassword** | Entités autorisées à récupérer le secret |
+| **Identité de la machine** | Nom d’hôte d’un serveur autorisé à utiliser le compte |
 
-- **Description :** Une description du compte gMSA.
+> 🗂️ Les comptes sont créés dans l’OU **Managed Service Accounts** de votre domaine.
 
-- **Nom de domaine racine (AD) :** Le FQDN du compte de service sera automatiquement attribué à l'aide du nom du compte de service renseigné précédemment.
+### Gestion des Principals
 
-- **Intervalle de changement de mot de passe (ManagedPasswordIntervalInDays) :** L'intervalle en jours pour le changement automatique du mot de passe, par exemple 30.
+```powershell
+.\gmsaeditor.ps1
+```
 
-- **Principals autorisés à récupérer le mot de passe (PrincipalsAllowedToRetrieveManagedPassword) :** L'entité ou les entités autorisées à récupérer le mot de passe. 
+![Editor screenshot](https://i.postimg.cc/WbbLCyNW/Capture.png)
 
-- **Identité de la machine :** Nom d'une machine autorisée à récupérer et utiliser les informations d'identification du compte de service géré.
-  
+- Saisissez le **Name** du compte gMSA existant.  
+- Utilisez **Add** pour ajouter un principal ou sélectionnez‑le dans la liste et cliquez sur **Remove** pour le supprimer.
 
-> [!NOTE]  
-> Les gMSA sont créées dans l'OU Managed Service Account : 
+---
 
-![gMSA3 Image](https://i0.wp.com/azurecloudai.blog/wp-content/uploads/2024/01/6acaf-image-38.png)
+## Captures d’écran
 
-4. **Gestion PrincipalsAllowedToRetrieveManagedPassword (gmsaeditor.ps1) :**
+| Créateur | Éditeur |
+| -------- | ------- |
+| ![Creator](https://i.postimg.cc/7ZRsYTds/Capture.png) | ![Editor](https://i.postimg.cc/WbbLCyNW/Capture.png) |
 
-   ![gMSA4 Image](https://i.postimg.cc/WbbLCyNW/Capture.png)
+---
 
-   
-> [!IMPORTANT]
-> Les champs à remplir sont :
+## Contribution
 
-- **Nom du compte de service (Name) :** Le nom du compte gMSA à gérer.
+Les demandes d’amélioration (issues) et *pull requests* sont les bienvenues !  
+Si vous souhaitez ajouter une fonctionnalité, ouvrez d’abord une *issue* pour en discuter.
 
-- **Principal à ajouter :** Ajout d'un PrincipalsAllowedToRetrieveManagedPassword.
-  
-  
-> [!TIP]
-> Pour supprimer un Principal, sélectionnez-le dans la listebox après avoir renseigné le nom du compte de service.
+---
 
+## Licence
+
+Distribué sous licence [MIT](LICENSE).  
+Copyright © 2025
 
