@@ -4,7 +4,6 @@
 
 > **Interface graphique PowerShell** pour créer, modifier et administrer des **Group Managed Service Accounts (gMSA)** dans Active Directory.
 
-[![Licence MIT](https://img.shields.io/badge/Licence-MIT-green.svg)](LICENSE)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5%2B-blue.svg)](#prérequis)
 [![Dernier commit](https://img.shields.io/github/last-commit/waaashed/gMSACreator)](https://github.com/waaashed/gMSACreator/commits/main)
 
@@ -20,7 +19,6 @@
    - [Gestion des Principals](#gestion-des-principals)
 5. [Captures d’écran](#captures-décran)
 6. [Contribution](#contribution)
-7. [Licence](#licence)
 
 ---
 
@@ -111,9 +109,3 @@ Les demandes d’amélioration (issues) et *pull requests* sont les bienvenues 
 Si vous souhaitez ajouter une fonctionnalité, ouvrez d’abord une *issue* pour en discuter.
 
 ---
-
-## Licence
-
-Distribué sous licence [MIT](LICENSE).  
-Copyright © 2025
-
